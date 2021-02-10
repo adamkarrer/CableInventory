@@ -1,0 +1,52 @@
+.html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 2.3fr 0.4fr;
+  gap: 0px 0px;
+  height: 100vh;
+  grid-template-areas:
+    "Head Head Head"
+    "Body Body Body"
+    "Foot Foot Foot";
+}
+.Head { grid-area: Head;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.Body { grid-area: Body;
+  background-color: lightgrey;
+  padding-top: 50px;
+  text-align: center;
+}
+.Foot { grid-area: Foot;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.wrapper{
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.wrapper label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.wrapper input {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+}

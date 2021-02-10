@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Store <%= store.number %> Inventory</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+
+  <div class="grid-container">
+  <div class="Head">
+    <h1>Sha-BAM</h1>
+  </div>
+  <div class="Body">
+    <%= store.name %><br /><br />
+    <div class="wrapper">
+
+
+    <form action="/stores/<%=store.number%>?_method=PUT" method="post">
+      <label>XB3:  <input type="text" name="xb3" value="<%=store.inventory.xb3%>" /></label>
+      <label>XB6: <input type="text" name="xb6" value="<%=store.inventory.xb6%>" /></label>
+      <label>XB7: <input type="text" name="xb7" value="<%=store.inventory.xb7%>" /></label>
+      <label>XG2: <input type="text" name="xg2" value="<%=store.inventory.xg2%>" /></label>
+      <label>XID: <input type="text" name="xid" value="<%=store.inventory.xid%>" /></label>
+      <label>XI6: <input type="text" name="xi6" value="<%=store.inventory.xi6%>" /></label>
+      <label>XG1v4: <input type="text" name="xg1v4" value="<%=store.inventory.xg1v4%>"/></label>
+      <label>RNG150: <input type="text" name="rng150" value="<%=store.inventory.rng150%>" /></label>
+
+      <input type="submit" value="Update" />
+      <input type="submit" value="Delete" formaction="/stores/<%=store.number%>?_method=DELETE" />
+    </form><br />
+      <a href="/">Back</a>
+    </div>
+  </div>
+  <div class="Foot">&copy; Adam Karrer 2021</div>
+</div>
+  </body>
+</html>

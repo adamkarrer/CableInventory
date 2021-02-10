@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Store <%= store.number %> Inventory</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+
+  <div class="grid-container">
+  <div class="Head">
+    <h1>Sha-BAM</h1>
+  </div>
+  <div class="Body">
+    <b>Store Name: </b><%= store.name %><br />
+    <b>Store #: </b><%= store.number %>
+    <p>
+      <b>Address: </b>
+      <%=store.address.street%><br />
+      <%=store.address.city%>, <%=store.address.state%><br />
+      <%=store.address.zip%>
+    </p>
+    <p>
+      <b>XB3:</b> <%= store.inventory.xb3 %><br />
+      <b>XB6:</b> <%= store.inventory.xb6 %><br />
+      <b>XB7:</b> <%= store.inventory.xb7 %><br />
+      <b>XG2:</b> <%= store.inventory.xg2 %><br />
+      <b>XiD:</b> <%= store.inventory.xid %><br />
+      <b>Xi6:</b> <%= store.inventory.xi6 %><br />
+      <b>XG1v4:</b> <%= store.inventory.xg1v4 %><br />
+      <b>RNG150:</b> <%= store.inventory.rng150 %><br />
+    </p>
+    <a href="/stores/<%=store.number%>/edit/">Edit</a>
+    <a href="/">Back</a><br />
+  </div>
+  <div class="Foot">&copy; Adam Karrer 2021</div>
+</div>
+  </body>
+</html>
